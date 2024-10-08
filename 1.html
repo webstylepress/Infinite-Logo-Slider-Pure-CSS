@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<title>Template</title>
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<style>
+			.logos-container {
+				overflow: hidden;
+				padding: 60px 0;
+				background: #fff;
+				white-space: nowrap;
+				position: relative;
+			}
+			@keyframes slideEffect {
+				from {
+					transform: translateX(0);
+				}
+				to {
+					transform: translateX(-100%);
+				}
+			}
+			.logos {
+				display: inline-block;
+				animation: 100s slideEffect infinite linear;
+			}
+			.logos-container:hover .logos {
+				animation-play-state: paused;
+			}
+			.logos img {
+				max-height: 50px;
+				margin: 0 40px;
+				filter: grayscale(100%);
+			}
+			.logos img:hover {
+				filter: grayscale(0);
+			}
+			.logos-container:before,
+			.logos-container:after {
+				position: absolute;
+				top: 0;
+				width: 250px;
+				height: 100%;
+				content: '';
+				z-index: 2;
+			}
+			.logos-container:before {
+				left: 0;
+				background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+			}
+			.logos-container:after {
+				right: 0;
+				background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="logos-container">
+			<div class="logos">
+				<img src="1.svg" alt="" />
+				<img src="2.svg" alt="" />
+				<img src="3.svg" alt="" />
+				<img src="4.svg" alt="" />
+				<img src="5.svg" alt="" />
+				<img src="6.svg" alt="" />
+				<img src="7.svg" alt="" />
+				<img src="8.svg" alt="" />
+				<img src="9.svg" alt="" />
+				<img src="1.svg" alt="" />
+				<img src="2.svg" alt="" />
+				<img src="3.svg" alt="" />
+				<img src="4.svg" alt="" />
+				<img src="5.svg" alt="" />
+				<img src="6.svg" alt="" />
+				<img src="7.svg" alt="" />
+				<img src="8.svg" alt="" />
+				<img src="9.svg" alt="" />
+				<img src="1.svg" alt="" />
+				<img src="2.svg" alt="" />
+				<img src="3.svg" alt="" />
+				<img src="4.svg" alt="" />
+				<img src="5.svg" alt="" />
+				<img src="6.svg" alt="" />
+				<img src="7.svg" alt="" />
+				<img src="8.svg" alt="" />
+				<img src="9.svg" alt="" />
+			</div>
+		</div>
+		<script>
+			window.onload = function () {
+				// Check if the duplication has already been done
+				if (!document.querySelector('.logos').hasAttribute('data-cloned')) {
+					// Clone the logos element
+					var logosDiv = document.querySelector('.logos').cloneNode(true);
+					// Mark the original logos element as cloned to prevent future duplications
+					document.querySelector('.logos').setAttribute('data-cloned', 'true');
+					// Append the cloned element to the logos container
+					document.querySelector('.logos').parentNode.appendChild(logosDiv);
+				}
+			};
+		</script>
+	</body>
+</html>
