@@ -1,1 +1,5 @@
-# Infinite-Logo-Slider-Pure-CSS
+# Infinite Logo Slider (Pure CSS)
+
+Tutorial: https://youtu.be/JkZrBFlk8MY
+
+WebStylePress
